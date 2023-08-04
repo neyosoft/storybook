@@ -1,4 +1,4 @@
-package com.careitator;
+package com.careitator.professional;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;

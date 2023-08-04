@@ -73,13 +73,13 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.careitator"
+    namespace "com.careitator.professional"
     defaultConfig {
-        applicationId "com.careitator"
+        applicationId "com.careitator.professional"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
-        versionName "1.0"
+        versionName "0.1.0"
     }
     signingConfigs {
         debug {

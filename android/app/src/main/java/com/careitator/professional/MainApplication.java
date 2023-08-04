@@ -1,4 +1,4 @@
-package com.careitator;
+package com.careitator.professional;
 
 import android.app.Application;
 import com.facebook.react.PackageList;
