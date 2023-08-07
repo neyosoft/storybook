@@ -1,11 +1,14 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
 
+import {AppText} from './components';
+
 export default function App(): JSX.Element {
   return (
     <SafeAreaView style={styles.scrollview}>
       <View style={styles.container}>
         <Text style={styles.label}>Welcome to CareItator Professional</Text>
+        <AppText>How are you doing?</AppText>
       </View>
     </SafeAreaView>
   );

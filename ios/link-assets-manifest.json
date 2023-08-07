@@ -1,0 +1,33 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/Roobert-Bold.otf",
+      "sha1": "622ecb37ab67e630e0eea863b20bc14b723f0157"
+    },
+    {
+      "path": "assets/fonts/Roobert-Light.otf",
+      "sha1": "16c22bc11cfdd53d7d205d20c24d4899926b1394"
+    },
+    {
+      "path": "assets/fonts/Roobert-Medium.otf",
+      "sha1": "cac3497d780c66745c56d980de99d05f0988a481"
+    },
+    {
+      "path": "assets/fonts/Roobert-MediumItalic.otf",
+      "sha1": "9c784ea7e4a29021ab3810107e4ef7bcc8c4ec00"
+    },
+    {
+      "path": "assets/fonts/Roobert-Regular.otf",
+      "sha1": "6cfc3f6dacb6e64ebf4ecb3ad455c2c12777a80a"
+    },
+    {
+      "path": "assets/fonts/Roobert-RegularItalic.otf",
+      "sha1": "9d01e7547c20b4aa603b4eafacf116933b8f397c"
+    },
+    {
+      "path": "assets/fonts/Roobert-SemiBold.otf",
+      "sha1": "2efbbce2629a0d6bedbd50074c340e375a137fb3"
+    }
+  ]
+}
