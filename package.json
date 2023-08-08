@@ -7,7 +7,21 @@
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "android:stage": "ENVFILE=.env.staging react-native run-android",
+    "android:prod": "ENVFILE=.env.production react-native run-android",
+    "android:debug:asset": "npx react-native bundle --dev false --platform android --entry-file index.js --bundle-output ./android/app/src/main/assets/index.android.bundle --assets-dest ./android/app/src/main/res",
+    "android:build:debug": "yarn android:debug:asset && cd android && ENVFILE=.env.staging ./gradlew assembleDebug",
+    "android:build:simulate": "yarn android:debug:asset && cd android && ENVFILE=.env.production ./gradlew assembleDebug",
+    "android:dev": "ENVFILE=.env.dev react-native run-android",
+    "android:build:release": "cd android && ENVFILE=.env.production ./gradlew assembleRelease",
+    "android:bundle:release": "cd android && ENVFILE=.env.production ./gradlew bundleRelease",
+    "android-apk:staging": "cd android && ./gradlew assembleStagingRelease",
+    "android-bundle-fast": "cd android && ./gradlew bundleRelease",
+    "clean": "watchman watch-del-all && rm -rf node_modules && rm -rf $TMPDIR/metro-* && rm -rf $TMPDIR/haste-map-* && yarn && yarn start --reset-cache",
+    "ios:dev": "npx react-native run-ios --scheme \"CareItator (dev)\"",
+    "ios:stage": "npx react-native run-ios --scheme \"CareItator (staging)\"",
+    "ios:prod": "npx react-native run-ios --scheme \"CareItator (production)\""
   },
   "dependencies": {
     "react": "18.2.0",
