@@ -13,15 +13,15 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		7699B88040F8A987B510C191 /* libPods-CareItator-CareItatorTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-CareItator-CareItatorTests.a */; };
-		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		19427B9C67224066AF142BEE /* Roobert-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED436036F01A4046B0746265 /* Roobert-Bold.otf */; };
 		2288222AFEBC4C1690EF4FC2 /* Roobert-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8BD083A28665438694A2A824 /* Roobert-Light.otf */; };
-		F086AABB45474A44BECDADAE /* Roobert-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = AE10E2A612104CDA81582821 /* Roobert-Medium.otf */; };
-		A0A33DEDBD504EE4B96EFF1F /* Roobert-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 898ABB92E53B47F0B9351A61 /* Roobert-MediumItalic.otf */; };
 		2D42E8CEEE1543278D46671E /* Roobert-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 810D9E3B160944BCAAA354B4 /* Roobert-Regular.otf */; };
+		7699B88040F8A987B510C191 /* libPods-CareItator-CareItatorTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-CareItator-CareItatorTests.a */; };
+		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		A0A33DEDBD504EE4B96EFF1F /* Roobert-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 898ABB92E53B47F0B9351A61 /* Roobert-MediumItalic.otf */; };
 		B830D52FD2644329884C8BA0 /* Roobert-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D565B8DA23004217A84AC624 /* Roobert-RegularItalic.otf */; };
 		C06D8E80E4E04C68B48C8EB9 /* Roobert-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C44D616FB0E4794948DC6DA /* Roobert-SemiBold.otf */; };
+		F086AABB45474A44BECDADAE /* Roobert-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = AE10E2A612104CDA81582821 /* Roobert-Medium.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +38,7 @@
 		00E356EE1AD99517003FC87E /* CareItatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CareItatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* CareItatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CareItatorTests.m; sourceTree = "<group>"; };
+		0C44D616FB0E4794948DC6DA /* Roobert-SemiBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roobert-SemiBold.otf"; path = "../assets/fonts/Roobert-SemiBold.otf"; sourceTree = "<group>"; };
 		0E6C8F7F2A827D8200E66F06 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* CareItator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CareItator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = CareItator/AppDelegate.h; sourceTree = "<group>"; };
@@ -50,16 +51,15 @@
 		5709B34CF0A7D63546082F79 /* Pods-CareItator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareItator.release.xcconfig"; path = "Target Support Files/Pods-CareItator/Pods-CareItator.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-CareItator-CareItatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareItator-CareItatorTests.debug.xcconfig"; path = "Target Support Files/Pods-CareItator-CareItatorTests/Pods-CareItator-CareItatorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-CareItator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CareItator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		810D9E3B160944BCAAA354B4 /* Roobert-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roobert-Regular.otf"; path = "../assets/fonts/Roobert-Regular.otf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = CareItator/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		898ABB92E53B47F0B9351A61 /* Roobert-MediumItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roobert-MediumItalic.otf"; path = "../assets/fonts/Roobert-MediumItalic.otf"; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-CareItator-CareItatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareItator-CareItatorTests.release.xcconfig"; path = "Target Support Files/Pods-CareItator-CareItatorTests/Pods-CareItator-CareItatorTests.release.xcconfig"; sourceTree = "<group>"; };
+		8BD083A28665438694A2A824 /* Roobert-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roobert-Light.otf"; path = "../assets/fonts/Roobert-Light.otf"; sourceTree = "<group>"; };
+		AE10E2A612104CDA81582821 /* Roobert-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roobert-Medium.otf"; path = "../assets/fonts/Roobert-Medium.otf"; sourceTree = "<group>"; };
+		D565B8DA23004217A84AC624 /* Roobert-RegularItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roobert-RegularItalic.otf"; path = "../assets/fonts/Roobert-RegularItalic.otf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		ED436036F01A4046B0746265 /* Roobert-Bold.otf */ = {isa = PBXFileReference; name = "Roobert-Bold.otf"; path = "../assets/fonts/Roobert-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		8BD083A28665438694A2A824 /* Roobert-Light.otf */ = {isa = PBXFileReference; name = "Roobert-Light.otf"; path = "../assets/fonts/Roobert-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		AE10E2A612104CDA81582821 /* Roobert-Medium.otf */ = {isa = PBXFileReference; name = "Roobert-Medium.otf"; path = "../assets/fonts/Roobert-Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		898ABB92E53B47F0B9351A61 /* Roobert-MediumItalic.otf */ = {isa = PBXFileReference; name = "Roobert-MediumItalic.otf"; path = "../assets/fonts/Roobert-MediumItalic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		810D9E3B160944BCAAA354B4 /* Roobert-Regular.otf */ = {isa = PBXFileReference; name = "Roobert-Regular.otf"; path = "../assets/fonts/Roobert-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		D565B8DA23004217A84AC624 /* Roobert-RegularItalic.otf */ = {isa = PBXFileReference; name = "Roobert-RegularItalic.otf"; path = "../assets/fonts/Roobert-RegularItalic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		0C44D616FB0E4794948DC6DA /* Roobert-SemiBold.otf */ = {isa = PBXFileReference; name = "Roobert-SemiBold.otf"; path = "../assets/fonts/Roobert-SemiBold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		ED436036F01A4046B0746265 /* Roobert-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roobert-Bold.otf"; path = "../assets/fonts/Roobert-Bold.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,7 +167,7 @@
 			sourceTree = "<group>";
 		};
 		F0CB5C3F276E4D0EAA7826CC /* Resources */ = {
-			isa = "PBXGroup";
+			isa = PBXGroup;
 			children = (
 				ED436036F01A4046B0746265 /* Roobert-Bold.otf */,
 				8BD083A28665438694A2A824 /* Roobert-Light.otf */,
@@ -178,8 +178,8 @@
 				0C44D616FB0E4794948DC6DA /* Roobert-SemiBold.otf */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
 			path = "";
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
