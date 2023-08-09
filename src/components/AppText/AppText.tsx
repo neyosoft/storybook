@@ -1,18 +1,69 @@
 import React from 'react';
-import {StyleSheet, Text, TextInputProps, View} from 'react-native';
+import {StyleSheet, Text, TextInputProps, TextStyle} from 'react-native';
 
-export const AppText = ({style, ...props}: TextInputProps) => {
+import {colors} from 'theme';
+
+interface Props extends TextInputProps {
+  color?: string;
+  variant?: 'normal' | 'medium' | 'bold';
+  size?: 'normal' | 'small' | 'large' | 'xlarge' | 'xxlarge';
+}
+
+export const AppText = ({
+  style,
+  color,
+  size = 'normal',
+  variant = 'normal',
+  ...props
+}: Props) => {
+  const additionalStyle: TextStyle = {};
+
+  if (color) {
+    additionalStyle.color = color;
+  }
+
   return (
-    <View>
-      <Text style={[style, styles.label]} {...props} />
-    </View>
+    <Text
+      style={[
+        styles.label,
+        styles[size],
+        styles[variant],
+        additionalStyle,
+        style,
+      ]}
+      {...props}
+    />
   );
 };
 
 const styles = StyleSheet.create({
   label: {
     fontSize: 14,
-    color: 'red',
     fontFamily: 'Roobert-Regular',
+  },
+  normal: {
+    fontSize: 14,
+    color: colors.black,
+    fontFamily: 'Roobert-Regular',
+  },
+  medium: {
+    fontWeight: '500',
+    fontFamily: 'Roobert-Medium',
+  },
+  bold: {
+    fontWeight: '700',
+    fontFamily: 'Roobert-Bold',
+  },
+  small: {
+    fontSize: 12,
+  },
+  large: {
+    fontSize: 16,
+  },
+  xlarge: {
+    fontSize: 18,
+  },
+  xxlarge: {
+    fontSize: 20,
   },
 });
