@@ -1,7 +1,7 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
 
-import {AppText} from './components';
+import {AppText} from 'components';
 
 export default function App(): JSX.Element {
   return (
