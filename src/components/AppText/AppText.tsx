@@ -1,40 +1,37 @@
 import React from 'react';
-import {StyleSheet, Text, TextInputProps, TextStyle} from 'react-native';
+import {StyleSheet, Text, TextProps, TextStyle} from 'react-native';
 
 import {colors} from 'theme';
 
-interface Props extends TextInputProps {
+interface Props extends TextProps {
   color?: string;
   variant?: 'normal' | 'medium' | 'bold';
   size?: 'normal' | 'small' | 'large' | 'xlarge' | 'xxlarge';
 }
 
-export const AppText = ({
-  style,
-  color,
-  size = 'normal',
-  variant = 'normal',
-  ...props
-}: Props) => {
-  const additionalStyle: TextStyle = {};
+export const AppText = React.forwardRef<Text, Props>(
+  ({style, color, size = 'normal', variant = 'normal', ...props}, ref) => {
+    const additionalStyle: TextStyle = {};
 
-  if (color) {
-    additionalStyle.color = color;
-  }
+    if (color) {
+      additionalStyle.color = color;
+    }
 
-  return (
-    <Text
-      style={[
-        styles.label,
-        styles[size],
-        styles[variant],
-        additionalStyle,
-        style,
-      ]}
-      {...props}
-    />
-  );
-};
+    return (
+      <Text
+        ref={ref}
+        style={[
+          styles.label,
+          styles[size],
+          styles[variant],
+          additionalStyle,
+          style,
+        ]}
+        {...props}
+      />
+    );
+  },
+);
 
 const styles = StyleSheet.create({
   label: {
