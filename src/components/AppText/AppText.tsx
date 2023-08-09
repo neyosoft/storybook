@@ -3,13 +3,13 @@ import {StyleSheet, Text, TextProps, TextStyle} from 'react-native';
 
 import {colors} from 'theme';
 
-interface Props extends TextProps {
+export interface AppTextProps extends TextProps {
   color?: string;
   variant?: 'normal' | 'medium' | 'bold';
   size?: 'normal' | 'small' | 'large' | 'xlarge' | 'xxlarge';
 }
 
-export const AppText = React.forwardRef<Text, Props>(
+export const AppText = React.forwardRef<Text, AppTextProps>(
   ({style, color, size = 'normal', variant = 'normal', ...props}, ref) => {
     const additionalStyle: TextStyle = {};
 
