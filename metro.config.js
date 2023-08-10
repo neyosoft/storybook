@@ -14,8 +14,8 @@ const storybookSourceExt =
 
 const config = {
   resolver: {
+    resolverMainFields: ['sbmodern', 'react-native', 'browser', 'main'],
     sourceExts: [...storybookSourceExt, ...defaultConfig.resolver.sourceExts],
-    resolverMainFields: ['react-native', 'browser', 'main'],
   },
 };
 
