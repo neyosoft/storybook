@@ -11,16 +11,21 @@ export default {
 
 export const Basic: Story = {
   args: {
-    color: 'red',
-    children: 'Hello',
+    children: 'This is a custom text label',
   },
 };
 
-export const AnotherExample: Story = {
+export const LabelWithColor: Story = {
   args: {
     color: 'red',
+    children: 'This is a custom text label',
+  },
+};
+
+export const BoldAndXLargeLabel: Story = {
+  args: {
+    ...Basic.args,
     variant: 'bold',
     size: 'xlarge',
-    children: 'Hello',
   },
 };

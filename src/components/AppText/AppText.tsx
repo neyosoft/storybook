@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, TextProps, TextStyle} from 'react-native';
 
-import {colors} from 'theme';
+import {colors} from '@theme/colors';
 
 export interface AppTextProps extends TextProps {
   color?: string;
