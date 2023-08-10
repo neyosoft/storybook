@@ -5,8 +5,8 @@ import {colors} from '@theme/colors';
 
 export interface AppTextProps extends TextProps {
   color?: string;
-  variant?: 'normal' | 'medium' | 'bold';
   size?: 'normal' | 'small' | 'large' | 'xlarge' | 'xxlarge';
+  variant?: 'normal' | 'medium' | 'semi-bold' | 'bold' | 'bolder';
 }
 
 export const AppText = React.forwardRef<Text, AppTextProps>(
@@ -40,16 +40,23 @@ const styles = StyleSheet.create({
   },
   normal: {
     fontSize: 14,
-    color: colors.black,
+    color: colors.dark,
     fontFamily: 'Roobert-Regular',
   },
   medium: {
     fontWeight: '500',
     fontFamily: 'Roobert-Medium',
   },
+  ['semi-bold']: {
+    fontWeight: '600',
+    fontFamily: 'Roobert-SemiBold',
+  },
   bold: {
     fontWeight: '700',
     fontFamily: 'Roobert-Bold',
+  },
+  bolder: {
+    fontWeight: '800',
   },
   small: {
     fontSize: 12,
