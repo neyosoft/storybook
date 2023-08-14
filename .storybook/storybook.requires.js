@@ -49,6 +49,7 @@ const getStories = () => {
   return {
     "./src/components/AppText/AppTest.stories.tsx": require("../src/components/AppText/AppTest.stories.tsx"),
     "./src/components/Buttons/Button/Button.stories.tsx": require("../src/components/Buttons/Button/Button.stories.tsx"),
+    "./src/components/Cards/OnboardingSnapCard/OnboardingSnapCard.stories.tsx": require("../src/components/Cards/OnboardingSnapCard/OnboardingSnapCard.stories.tsx"),
   };
 };
 

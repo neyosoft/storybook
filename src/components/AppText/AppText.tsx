@@ -5,7 +5,7 @@ import {colors} from '@theme/colors';
 
 export interface AppTextProps extends TextProps {
   color?: string;
-  size?: 'normal' | 'small' | 'large' | 'xlarge' | 'xxlarge';
+  size?: 'normal' | 'xsmall' | 'small' | 'large' | 'xlarge' | 'xxlarge';
   variant?: 'normal' | 'medium' | 'semi-bold' | 'bold' | 'bolder';
 }
 
@@ -57,6 +57,9 @@ const styles = StyleSheet.create({
   },
   bolder: {
     fontWeight: '800',
+  },
+  xsmall: {
+    fontSize: 10,
   },
   small: {
     fontSize: 12,
