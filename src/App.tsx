@@ -1,11 +1,10 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet, View} from 'react-native';
 
-import {AppText, OnboardingSnapCard} from 'components';
 import {OnboardingFastIcon} from 'icons/OnboardingFastIcon';
-import {OnboardingSecureIcon} from 'icons/OnboardingSecureIcon';
-import {OnboardingLocationIcon} from 'icons/OnboardingLocationIcon';
-import {Button} from 'components/Buttons';
+import {AppText, OnboardingSnapCard, TextField} from 'components';
+import {ProfileInputIcon} from 'icons/ProfileInputIcon';
+import {ProfileInputActiveIcon} from 'icons/ProfileInputActiveIcon';
 
 export default function App(): JSX.Element {
   return (
@@ -20,19 +19,17 @@ export default function App(): JSX.Element {
           description="Secure & Reliable"
           icon={<OnboardingFastIcon />}
         />
-        <OnboardingSnapCard
-          title="100%"
-          description="Location Friendly"
-          icon={<OnboardingLocationIcon />}
-        />
-        <OnboardingSnapCard
-          title="Instant"
-          description="Credit Alert"
-          icon={<OnboardingSecureIcon />}
-        />
 
-        <Button label="Get Started" />
-        <Button variant="default" label="Get Started" />
+        <TextField
+          placeholder="Get Started"
+          left={<ProfileInputIcon style={styles.leftIcon} />}
+          activeLeft={<ProfileInputActiveIcon style={styles.leftIcon} />}
+        />
+        <TextField
+          placeholder="Let go there"
+          left={<ProfileInputIcon style={styles.leftIcon} />}
+          activeLeft={<ProfileInputActiveIcon style={styles.leftIcon} />}
+        />
       </View>
     </SafeAreaView>
   );
@@ -50,5 +47,8 @@ const styles = StyleSheet.create({
   label: {
     fontSize: 30,
     textAlign: 'center',
+  },
+  leftIcon: {
+    marginRight: 12,
   },
 });
