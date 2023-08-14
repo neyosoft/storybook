@@ -1,10 +1,12 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet, View} from 'react-native';
 
-import {OnboardingFastIcon} from 'icons/OnboardingFastIcon';
 import {AppText, OnboardingSnapCard, TextField} from 'components';
-import {ProfileInputIcon} from 'icons/ProfileInputIcon';
-import {ProfileInputActiveIcon} from 'icons/ProfileInputActiveIcon';
+import {
+  ProfileInputIcon,
+  OnboardingFastIcon,
+  ProfileInputActiveIcon,
+} from 'icons';
 
 export default function App(): JSX.Element {
   return (
