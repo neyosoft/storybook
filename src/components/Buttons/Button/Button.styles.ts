@@ -7,10 +7,16 @@ export const styles = StyleSheet.create({
     height: 70,
     borderRadius: 20,
     alignItems: 'center',
+    paddingHorizontal: 20,
     justifyContent: 'center',
-    backgroundColor: colors.secondary,
   },
   disabled: {
     opacity: 0.3,
+  },
+  primary: {
+    backgroundColor: colors.secondary,
+  },
+  default: {
+    backgroundColor: '#E5EEFF',
   },
 });

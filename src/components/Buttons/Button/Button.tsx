@@ -8,13 +8,21 @@ import {AppText} from 'components/AppText';
 export interface ButtonProps extends PressableProps {
   label?: string;
   loading?: boolean;
+  variant?: 'primary' | 'default';
 }
 
-export const Button = ({loading, style, label, ...props}: ButtonProps) => {
+export const Button = ({
+  loading,
+  variant = 'primary',
+  style,
+  label,
+  ...props
+}: ButtonProps) => {
   return (
     <Pressable
       style={({pressed}) => [
         styles.container,
+        styles[variant],
         {opacity: pressed ? 0.7 : 1},
         props.disabled ? styles.disabled : undefined,
         style,
@@ -23,7 +31,10 @@ export const Button = ({loading, style, label, ...props}: ButtonProps) => {
       {loading ? (
         <ActivityIndicator color={colors.white} />
       ) : (
-        <AppText variant="medium" size="large" color={colors.white}>
+        <AppText
+          size="large"
+          variant="medium"
+          color={variant === 'primary' ? colors.white : colors.dark}>
           {label}
         </AppText>
       )}

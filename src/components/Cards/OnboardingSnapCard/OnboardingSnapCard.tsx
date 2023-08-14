@@ -1,9 +1,9 @@
 import React from 'react';
 import {View} from 'react-native';
 
+import {colors} from 'theme';
 import {AppText} from 'components/AppText';
 import {styles} from './OnboardingSnapCard.styles';
-import {colors} from 'theme';
 
 export interface OnboardingSnapCardProps {
   title: string;
