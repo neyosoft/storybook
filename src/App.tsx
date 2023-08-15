@@ -1,15 +1,7 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet, View} from 'react-native';
 
-import {AppText, Checkbox, OnboardingSnapCard, TextField} from 'components';
-import {
-  ProfileInputIcon,
-  OnboardingFastIcon,
-  ProfileInputActiveIcon,
-  PasswordInputIcon,
-  PasswordInputActiveIcon,
-  EyeClosedIcon,
-} from 'icons';
+import {AppText} from 'components';
 
 export default function App(): JSX.Element {
   return (
@@ -18,26 +10,6 @@ export default function App(): JSX.Element {
         <AppText style={styles.label}>
           Welcome to CareItator Professional
         </AppText>
-
-        <OnboardingSnapCard
-          title="FAST"
-          description="Secure & Reliable"
-          icon={<OnboardingFastIcon />}
-        />
-
-        <TextField
-          placeholder="Password"
-          left={<PasswordInputIcon style={styles.leftIcon} />}
-          activeLeft={<PasswordInputActiveIcon style={styles.leftIcon} />}
-          right={<EyeClosedIcon />}
-        />
-        <TextField
-          placeholder="Let go there"
-          left={<ProfileInputIcon style={styles.leftIcon} />}
-          activeLeft={<ProfileInputActiveIcon style={styles.leftIcon} />}
-        />
-
-        <Checkbox checked={true} label="How are you doing?" />
       </View>
     </SafeAreaView>
   );
