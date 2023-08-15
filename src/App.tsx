@@ -6,6 +6,9 @@ import {
   ProfileInputIcon,
   OnboardingFastIcon,
   ProfileInputActiveIcon,
+  PasswordInputIcon,
+  PasswordInputActiveIcon,
+  EyeClosedIcon,
 } from 'icons';
 
 export default function App(): JSX.Element {
@@ -23,9 +26,10 @@ export default function App(): JSX.Element {
         />
 
         <TextField
-          placeholder="Get Started"
-          left={<ProfileInputIcon style={styles.leftIcon} />}
-          activeLeft={<ProfileInputActiveIcon style={styles.leftIcon} />}
+          placeholder="Password"
+          left={<PasswordInputIcon style={styles.leftIcon} />}
+          activeLeft={<PasswordInputActiveIcon style={styles.leftIcon} />}
+          right={<EyeClosedIcon />}
         />
         <TextField
           placeholder="Let go there"

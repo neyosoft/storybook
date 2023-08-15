@@ -29,7 +29,6 @@ export const TextField = ({
         onBlur={() => setFocused(false)}
         onFocus={() => setFocused(true)}
       />
-      {right}
       {focused ? activeRight || right : right}
     </View>
   );

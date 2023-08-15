@@ -16,5 +16,6 @@ export const styles = StyleSheet.create({
   },
   input: {
     flex: 1,
+    height: 45,
   },
 });
