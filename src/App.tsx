@@ -1,7 +1,7 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet, View} from 'react-native';
 
-import {AppText, OnboardingSnapCard, TextField} from 'components';
+import {AppText, Checkbox, OnboardingSnapCard, TextField} from 'components';
 import {
   ProfileInputIcon,
   OnboardingFastIcon,
@@ -36,6 +36,8 @@ export default function App(): JSX.Element {
           left={<ProfileInputIcon style={styles.leftIcon} />}
           activeLeft={<ProfileInputActiveIcon style={styles.leftIcon} />}
         />
+
+        <Checkbox checked={true} label="How are you doing?" />
       </View>
     </SafeAreaView>
   );
