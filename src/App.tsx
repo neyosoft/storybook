@@ -1,18 +1,24 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet, View} from 'react-native';
+import {SafeAreaView, StyleSheet} from 'react-native';
 
-import {AppText} from 'components';
+import {Welcome} from 'screens';
 
 export default function App(): JSX.Element {
   return (
     <SafeAreaView style={styles.scrollview}>
-      <View style={styles.container}>
-        <AppText style={styles.label}>
-          Welcome to CareItator Professional
-        </AppText>
-      </View>
+      <Welcome />
     </SafeAreaView>
   );
+
+  //  return (
+  //    <SafeAreaView style={styles.scrollview}>
+  //      <View style={styles.container}>
+  //        <AppText style={styles.label}>
+  //          Welcome to CareItator Professional
+  //        </AppText>
+  //      </View>
+  //    </SafeAreaView>
+  //  );
 }
 
 const styles = StyleSheet.create({
