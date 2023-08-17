@@ -1,10 +1,10 @@
 import React from 'react';
 import {View, Image} from 'react-native';
 
-import {colors, images, sizes} from 'theme';
 import {GetStartedElleipse} from 'icons';
 import {styles} from './GetStarted.styles';
 import {AppText, Button} from 'components';
+import {colors, images, sizes} from 'theme';
 
 export const GetStarted = () => {
   return (

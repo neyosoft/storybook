@@ -1,61 +1,15 @@
 import React from 'react';
-import {FlatList, Image, ListRenderItem, View, ViewStyle} from 'react-native';
+import {FlatList, Image, ListRenderItem, View} from 'react-native';
 
-import {images} from 'theme';
+import {Slide} from 'types/slide';
 import {styles} from './Welcome.styles';
+import {OnboardingFastIcon} from 'icons';
+import {introSlideData} from 'data/introSlideData';
 import {AppText, Button, OnboardingSnapCard} from 'components';
-import {
-  FirstSlideEllipse,
-  ThirdSlideEllipse,
-  OnboardingFastIcon,
-  SecondSlideEllipse,
-} from 'icons';
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import {IntroRoutes, IntroStackParamList} from 'types/navigation';
 
-interface Slide {
-  image: any;
-  title: string;
-  cardTitle: string;
-  description: string;
-  imageTopMargin: number;
-  cardDescription: string;
-  cardPosition?: ViewStyle;
-  background: React.JSX.Element;
-}
-
-const slides: Slide[] = [
-  {
-    imageTopMargin: 40,
-    image: images.introSlide1,
-    cardPosition: {left: 20, top: '37%'},
-    background: <FirstSlideEllipse style={styles.firstBackgroundEllipse} />,
-    title: 'Effortless Scheduling for Professionals',
-    cardTitle: 'FAST',
-    cardDescription: 'Secure & Reliable',
-    description: 'Seamlessly connects healthcare professionals and facilities',
-  },
-  {
-    imageTopMargin: 0,
-    cardTitle: '100%',
-    image: images.introSlide2,
-    cardPosition: {left: 20, top: '30%'},
-    cardDescription: 'Location Friendly',
-    background: <SecondSlideEllipse style={styles.backgroundEllipse} />,
-    title: 'Flexible Shifts Limitless Possibilites',
-    description:
-      'Choose a convenient shift that suits your availability and is located closest to you',
-  },
-  {
-    imageTopMargin: 0,
-    image: images.introSlide3,
-    cardTitle: 'Instant',
-    cardPosition: {right: 20, top: '32%'},
-    cardDescription: 'Credit Alert',
-    background: <ThirdSlideEllipse style={styles.backgroundEllipse} />,
-    title: 'Get Job, Get Paid Instantly',
-    description:
-      'Seamlessly connects healthcare professionals to available facilities',
-  },
-];
+type Props = NativeStackScreenProps<IntroStackParamList, IntroRoutes.Welcome>;
 
 const renderItem: ListRenderItem<Slide> = ({item}) => {
   return (
@@ -81,21 +35,24 @@ const renderItem: ListRenderItem<Slide> = ({item}) => {
   );
 };
 
-export const Welcome = () => {
+export const Welcome = ({navigation}: Props) => {
   return (
     <View style={styles.container}>
       <FlatList
-        data={slides}
         horizontal={true}
         pagingEnabled={true}
-        renderItem={renderItem}
+        data={introSlideData}
         overScrollMode="never"
+        renderItem={renderItem}
         scrollToOverflowEnabled={false}
         showsHorizontalScrollIndicator={false}
       />
 
       <View style={styles.bottomContainer}>
-        <Button label="Get Started" />
+        <Button
+          label="Get Started"
+          onPress={() => navigation.navigate(IntroRoutes.GetStarted)}
+        />
       </View>
     </View>
   );

@@ -3,17 +3,11 @@ import {colors, sizes} from 'theme';
 
 export const styles = StyleSheet.create({
   container: {
+    flex: 1,
     backgroundColor: '#E7F0FD',
   },
   slideContainer: {
     width: sizes.WINDOW_WIDTH,
-  },
-  firstBackgroundEllipse: {
-    right: 0,
-    position: 'absolute',
-  },
-  backgroundEllipse: {
-    position: 'absolute',
   },
   slideImage: {
     width: 384,
@@ -23,9 +17,9 @@ export const styles = StyleSheet.create({
     position: 'absolute',
   },
   textContainer: {
+    padding: 40,
     paddingTop: 50,
     marginTop: -20,
-    padding: 40,
     borderTopLeftRadius: 40,
     borderTopRightRadius: 40,
     backgroundColor: colors.white,
@@ -46,6 +40,7 @@ export const styles = StyleSheet.create({
   bottomContainer: {
     flex: 1,
     padding: 20,
+    marginTop: -100,
     backgroundColor: colors.white,
   },
 });
