@@ -19,6 +19,9 @@ export const styles = StyleSheet.create({
     width: 384,
     height: 432,
   },
+  snapCard: {
+    position: 'absolute',
+  },
   textContainer: {
     paddingTop: 50,
     marginTop: -20,

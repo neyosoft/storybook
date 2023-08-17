@@ -10,7 +10,7 @@ export interface AppTextProps extends TextProps {
 }
 
 export const AppText = React.forwardRef<Text, AppTextProps>(
-  ({style, color, size = 'normal', variant = 'normal', ...props}, ref) => {
+  ({style, color, size, variant = 'normal', ...props}, ref) => {
     const additionalStyle: TextStyle = {};
 
     if (color) {
@@ -22,8 +22,8 @@ export const AppText = React.forwardRef<Text, AppTextProps>(
         ref={ref}
         style={[
           styles.label,
-          styles[size],
           styles[variant],
+          size ? styles[size] : undefined,
           additionalStyle,
           style,
         ]}

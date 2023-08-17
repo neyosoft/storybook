@@ -1,34 +1,55 @@
 import React from 'react';
-import {FlatList, Image, ListRenderItem, View} from 'react-native';
+import {FlatList, Image, ListRenderItem, View, ViewStyle} from 'react-native';
 
 import {images} from 'theme';
-import {AppText, Button} from 'components';
+import {AppText, Button, OnboardingSnapCard} from 'components';
 import {styles} from './Welcome.styles';
-import {FirstSlideEllipse, SecondSlideEllipse, ThirdSlideEllipse} from 'icons';
+import {
+  FirstSlideEllipse,
+  OnboardingFastIcon,
+  SecondSlideEllipse,
+  ThirdSlideEllipse,
+} from 'icons';
 
 interface Slide {
   image: any;
   title: string;
+  cardTitle: string;
   description: string;
+  imageTopMargin: number;
+  cardDescription: string;
+  cardPosition?: ViewStyle;
   background: React.JSX.Element;
 }
 
 const slides: Slide[] = [
   {
+    imageTopMargin: 40,
     image: images.introSlide1,
+    cardPosition: {left: 20, top: '37%'},
     background: <FirstSlideEllipse style={styles.firstBackgroundEllipse} />,
     title: 'Effortless Scheduling for Professionals',
+    cardTitle: 'FAST',
+    cardDescription: 'Secure & Reliable',
     description: 'Seamlessly connects healthcare professionals and facilities',
   },
   {
+    imageTopMargin: 0,
     image: images.introSlide2,
+    cardTitle: '100%',
+    cardPosition: {left: 20, top: '30%'},
+    cardDescription: 'Location Friendly',
     background: <SecondSlideEllipse style={styles.backgroundEllipse} />,
     title: 'Flexible Shifts Limitless Possibilites',
     description:
       'Choose a convenient shift that suits your availability and is located closest to you',
   },
   {
+    imageTopMargin: 0,
     image: images.introSlide3,
+    cardTitle: 'Instant',
+    cardPosition: {right: 20, top: '32%'},
+    cardDescription: 'Credit Alert',
     background: <ThirdSlideEllipse style={styles.backgroundEllipse} />,
     title: 'Get Job, Get Paid Instantly',
     description:
@@ -40,7 +61,16 @@ const renderItem: ListRenderItem<Slide> = ({item}) => {
   return (
     <View style={styles.slideContainer}>
       {item.background}
-      <Image source={item.image} style={styles.slideImage} />
+      <Image
+        source={item.image}
+        style={[styles.slideImage, {top: item.imageTopMargin}]}
+      />
+      <OnboardingSnapCard
+        title={item.cardTitle}
+        style={[styles.snapCard, item.cardPosition]}
+        icon={<OnboardingFastIcon />}
+        description={item.cardDescription}
+      />
       <View style={styles.textContainer}>
         <AppText variant="bold" style={styles.slideTitle}>
           {item.title}
