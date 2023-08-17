@@ -1,3 +1,5 @@
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
+
 export enum IntroRoutes {
   Welcome = 'Welcome',
   QuickTip = 'QuickTip',
@@ -9,3 +11,6 @@ export type IntroStackParamList = {
   [IntroRoutes.QuickTip]: undefined;
   [IntroRoutes.GetStarted]: undefined;
 };
+
+export type IntroStackRoutes<T extends keyof IntroStackParamList> =
+  NativeStackScreenProps<IntroStackParamList, T>;

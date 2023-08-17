@@ -5,15 +5,11 @@ import {GetStartedElleipse} from 'icons';
 import {styles} from './GetStarted.styles';
 import {AppText, Button} from 'components';
 import {colors, images, sizes} from 'theme';
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {IntroRoutes, IntroStackParamList} from 'types/navigation';
+import {IntroRoutes, IntroStackRoutes} from 'types/navigation';
 
-type Props = NativeStackScreenProps<
-  IntroStackParamList,
-  IntroRoutes.GetStarted
->;
-
-export const GetStarted = ({navigation}: Props) => {
+export const GetStarted = ({
+  navigation,
+}: IntroStackRoutes<IntroRoutes.GetStarted>) => {
   return (
     <View style={styles.container}>
       <View style={styles.topArea}>

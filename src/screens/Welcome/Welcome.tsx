@@ -6,10 +6,7 @@ import {styles} from './Welcome.styles';
 import {OnboardingFastIcon} from 'icons';
 import {introSlideData} from 'data/introSlideData';
 import {AppText, Button, OnboardingSnapCard} from 'components';
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {IntroRoutes, IntroStackParamList} from 'types/navigation';
-
-type Props = NativeStackScreenProps<IntroStackParamList, IntroRoutes.Welcome>;
+import {IntroRoutes, IntroStackRoutes} from 'types/navigation';
 
 const renderItem: ListRenderItem<Slide> = ({item}) => {
   return (
@@ -35,7 +32,9 @@ const renderItem: ListRenderItem<Slide> = ({item}) => {
   );
 };
 
-export const Welcome = ({navigation}: Props) => {
+export const Welcome = ({
+  navigation,
+}: IntroStackRoutes<IntroRoutes.Welcome>) => {
   return (
     <View style={styles.container}>
       <FlatList
