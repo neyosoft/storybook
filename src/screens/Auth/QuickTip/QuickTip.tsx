@@ -5,6 +5,7 @@ import {colors} from 'theme';
 import {styles} from './QuickTip.styles';
 import {QuickTipBadge} from './components';
 import {AppText, Button} from 'components';
+import {IntroRoutes, IntroStackRoutes} from 'types/navigation';
 
 const list = [
   'Support Services',
@@ -21,7 +22,9 @@ const list = [
   'Plenty Workload',
 ];
 
-export const QuickTip = () => {
+export const QuickTip = ({
+  navigation,
+}: IntroStackRoutes<IntroRoutes.QuickTip>) => {
   const [selected, setSelected] = useState<string[]>([]);
 
   const handleSelection = (tip: string) => {
@@ -64,6 +67,7 @@ export const QuickTip = () => {
           label="Get Started"
           style={styles.getStartedBtn}
           disabled={selected.length === 0}
+          onPress={() => navigation.navigate(IntroRoutes.CreateAccount)}
         />
       </View>
     </SafeAreaView>

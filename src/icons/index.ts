@@ -4,6 +4,7 @@ export {ThirdSlideEllipse} from './ThirdSlideEllipse';
 export {FirstSlideEllipse} from './FirstSlideEllipse';
 export {PasswordInputIcon} from './PasswordInputIcon';
 export {GetStartedElleipse} from './GetStartedElleipse';
+export {NavigationBackIcon} from './NavigationBackIcon';
 export {OnboardingFastIcon} from './OnboardingFastIcon';
 export {SecondSlideEllipse} from './SecondSlideEllipse';
 export {CheckboxCheckedIcon} from './CheckboxCheckedIcon';
