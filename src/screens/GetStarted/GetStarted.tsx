@@ -5,8 +5,15 @@ import {GetStartedElleipse} from 'icons';
 import {styles} from './GetStarted.styles';
 import {AppText, Button} from 'components';
 import {colors, images, sizes} from 'theme';
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import {IntroRoutes, IntroStackParamList} from 'types/navigation';
 
-export const GetStarted = () => {
+type Props = NativeStackScreenProps<
+  IntroStackParamList,
+  IntroRoutes.GetStarted
+>;
+
+export const GetStarted = ({navigation}: Props) => {
   return (
     <View style={styles.container}>
       <View style={styles.topArea}>
@@ -38,8 +45,16 @@ export const GetStarted = () => {
             How will you like to get started with CareItator
           </AppText>
         </View>
-        <Button label="Create Account" />
-        <Button style={styles.loginBtn} label="Login" variant="default" />
+        <Button
+          label="Create Account"
+          onPress={() => navigation.navigate(IntroRoutes.QuickTip)}
+        />
+        <Button
+          style={styles.loginBtn}
+          label="Login"
+          variant="default"
+          onPress={() => navigation.navigate(IntroRoutes.QuickTip)}
+        />
       </View>
     </View>
   );

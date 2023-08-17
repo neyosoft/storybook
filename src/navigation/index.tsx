@@ -15,10 +15,10 @@ export function AppNavigation() {
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={screenOptions}
-        initialRouteName={IntroRoutes.QuickTip}>
+        initialRouteName={IntroRoutes.Welcome}>
         <Stack.Screen name={IntroRoutes.Welcome} component={Welcome} />
-        <Stack.Screen name={IntroRoutes.GetStarted} component={GetStarted} />
         <Stack.Screen name={IntroRoutes.QuickTip} component={QuickTip} />
+        <Stack.Screen name={IntroRoutes.GetStarted} component={GetStarted} />
       </Stack.Navigator>
     </NavigationContainer>
   );

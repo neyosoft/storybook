@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import {SafeAreaView, StatusBar, View} from 'react-native';
 
-import {AppText, Button} from 'components';
-import {QuickTipBadge} from './components';
-import {styles} from './QuickTip.styles';
 import {colors} from 'theme';
+import {styles} from './QuickTip.styles';
+import {QuickTipBadge} from './components';
+import {AppText, Button} from 'components';
 
 const list = [
   'Support Services',
@@ -52,6 +52,7 @@ export const QuickTip = () => {
         <View style={styles.tipRow}>
           {list.map(tip => (
             <QuickTipBadge
+              key={tip}
               label={tip}
               selected={selected.includes(tip)}
               onPress={() => handleSelection(tip)}
