@@ -5,12 +5,12 @@ import {colors} from '@theme/colors';
 
 export interface AppTextProps extends TextProps {
   color?: string;
-  variant?: 'normal' | 'medium' | 'bold';
-  size?: 'normal' | 'small' | 'large' | 'xlarge' | 'xxlarge';
+  size?: 'normal' | 'xsmall' | 'small' | 'large' | 'xlarge' | 'xxlarge';
+  variant?: 'normal' | 'medium' | 'semi-bold' | 'bold' | 'bolder';
 }
 
 export const AppText = React.forwardRef<Text, AppTextProps>(
-  ({style, color, size = 'normal', variant = 'normal', ...props}, ref) => {
+  ({style, color, size, variant = 'normal', ...props}, ref) => {
     const additionalStyle: TextStyle = {};
 
     if (color) {
@@ -22,8 +22,8 @@ export const AppText = React.forwardRef<Text, AppTextProps>(
         ref={ref}
         style={[
           styles.label,
-          styles[size],
           styles[variant],
+          size ? styles[size] : undefined,
           additionalStyle,
           style,
         ]}
@@ -36,20 +36,30 @@ export const AppText = React.forwardRef<Text, AppTextProps>(
 const styles = StyleSheet.create({
   label: {
     fontSize: 14,
+    color: colors.dark,
     fontFamily: 'Roobert-Regular',
   },
   normal: {
     fontSize: 14,
-    color: colors.black,
     fontFamily: 'Roobert-Regular',
   },
   medium: {
     fontWeight: '500',
     fontFamily: 'Roobert-Medium',
   },
+  ['semi-bold']: {
+    fontWeight: '600',
+    fontFamily: 'Roobert-SemiBold',
+  },
   bold: {
     fontWeight: '700',
     fontFamily: 'Roobert-Bold',
+  },
+  bolder: {
+    fontWeight: '800',
+  },
+  xsmall: {
+    fontSize: 10,
   },
   small: {
     fontSize: 12,
