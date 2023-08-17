@@ -60,7 +60,11 @@ export const QuickTip = () => {
           ))}
         </View>
 
-        <Button label="Get Started" style={styles.getStartedBtn} />
+        <Button
+          label="Get Started"
+          style={styles.getStartedBtn}
+          disabled={selected.length === 0}
+        />
       </View>
     </SafeAreaView>
   );
