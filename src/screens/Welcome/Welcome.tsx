@@ -2,13 +2,13 @@ import React from 'react';
 import {FlatList, Image, ListRenderItem, View, ViewStyle} from 'react-native';
 
 import {images} from 'theme';
-import {AppText, Button, OnboardingSnapCard} from 'components';
 import {styles} from './Welcome.styles';
+import {AppText, Button, OnboardingSnapCard} from 'components';
 import {
   FirstSlideEllipse,
+  ThirdSlideEllipse,
   OnboardingFastIcon,
   SecondSlideEllipse,
-  ThirdSlideEllipse,
 } from 'icons';
 
 interface Slide {
@@ -35,8 +35,8 @@ const slides: Slide[] = [
   },
   {
     imageTopMargin: 0,
-    image: images.introSlide2,
     cardTitle: '100%',
+    image: images.introSlide2,
     cardPosition: {left: 20, top: '30%'},
     cardDescription: 'Location Friendly',
     background: <SecondSlideEllipse style={styles.backgroundEllipse} />,

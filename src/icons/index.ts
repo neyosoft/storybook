@@ -3,6 +3,7 @@ export {ProfileInputIcon} from './ProfileInputIcon';
 export {ThirdSlideEllipse} from './ThirdSlideEllipse';
 export {FirstSlideEllipse} from './FirstSlideEllipse';
 export {PasswordInputIcon} from './PasswordInputIcon';
+export {GetStartedElleipse} from './GetStartedElleipse';
 export {OnboardingFastIcon} from './OnboardingFastIcon';
 export {SecondSlideEllipse} from './SecondSlideEllipse';
 export {CheckboxCheckedIcon} from './CheckboxCheckedIcon';

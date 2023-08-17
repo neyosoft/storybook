@@ -36,11 +36,11 @@ export const AppText = React.forwardRef<Text, AppTextProps>(
 const styles = StyleSheet.create({
   label: {
     fontSize: 14,
+    color: colors.dark,
     fontFamily: 'Roobert-Regular',
   },
   normal: {
     fontSize: 14,
-    color: colors.dark,
     fontFamily: 'Roobert-Regular',
   },
   medium: {
