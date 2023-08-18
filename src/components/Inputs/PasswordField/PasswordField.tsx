@@ -1,24 +1,22 @@
 import React, {useState} from 'react';
-import {View, TextInput, TextInputProps} from 'react-native';
+import {View, TextInput, TextInputProps, TouchableOpacity} from 'react-native';
 
-import {styles} from './TextField.styles';
+import {EyeClosedIcon} from 'icons';
+import {styles} from './PasswordField.styles';
 
 export interface TextFieldProps extends TextInputProps {
   left?: JSX.Element;
-  right?: JSX.Element;
   activeLeft?: JSX.Element;
-  activeRight?: JSX.Element;
 }
 
-export const TextField = ({
+export const PasswordField = ({
   left,
-  right,
   style,
   activeLeft,
-  activeRight,
   ...props
 }: TextFieldProps) => {
   const [focused, setFocused] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   return (
     <View
@@ -31,10 +29,15 @@ export const TextField = ({
       <TextInput
         {...props}
         style={styles.input}
+        secureTextEntry={!showPassword}
         onBlur={() => setFocused(false)}
         onFocus={() => setFocused(true)}
       />
-      {focused ? activeRight || right : right}
+      {focused && (
+        <TouchableOpacity onPress={() => setShowPassword(value => !value)}>
+          <EyeClosedIcon />
+        </TouchableOpacity>
+      )}
     </View>
   );
 };

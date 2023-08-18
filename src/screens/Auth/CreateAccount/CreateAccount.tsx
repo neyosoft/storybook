@@ -4,7 +4,24 @@ import {View, StatusBar, ScrollView, KeyboardAvoidingView} from 'react-native';
 
 import {colors} from 'theme';
 import {styles} from './CreateAccount.styles';
-import {AppText, BackButton, Button, Checkbox, TextField} from 'components';
+import {
+  AppText,
+  BackButton,
+  Button,
+  Checkbox,
+  PasswordField,
+  TextField,
+} from 'components';
+import {
+  EmailInputIcon,
+  ProfileInputIcon,
+  EmailInputActiveIcon,
+  PhoneNumberInputIcon,
+  ProfileInputActiveIcon,
+  PhoneNumberInputActiveIcon,
+  PasswordInputIcon,
+  PasswordInputActiveIcon,
+} from 'icons';
 
 export const CreateAccount = () => {
   return (
@@ -27,11 +44,31 @@ export const CreateAccount = () => {
         <View style={styles.formWrapper}>
           <KeyboardAvoidingView>
             <ScrollView contentContainerStyle={styles.contentContainerStyle}>
-              <TextField placeholder="Enter Firstname" />
-              <TextField placeholder="Enter Lastname" />
-              <TextField placeholder="Enter email address" />
-              <TextField placeholder="Enter email address" />
-              <TextField placeholder="Password (Min. of 8 Character)" />
+              <TextField
+                placeholder="Enter Firstname"
+                left={<ProfileInputIcon />}
+                activeLeft={<ProfileInputActiveIcon />}
+              />
+              <TextField
+                placeholder="Enter Lastname"
+                left={<ProfileInputIcon />}
+                activeLeft={<ProfileInputActiveIcon />}
+              />
+              <TextField
+                placeholder="Enter email address"
+                left={<EmailInputIcon />}
+                activeLeft={<EmailInputActiveIcon />}
+              />
+              <TextField
+                placeholder="Enter phone number"
+                left={<PhoneNumberInputIcon />}
+                activeLeft={<PhoneNumberInputActiveIcon />}
+              />
+              <PasswordField
+                placeholder="Password (Min. of 8 Character)"
+                left={<PasswordInputIcon />}
+                activeLeft={<PasswordInputActiveIcon />}
+              />
               <Checkbox>
                 <AppText>
                   I have read, understood and I agree to CareItator’s Terms and
