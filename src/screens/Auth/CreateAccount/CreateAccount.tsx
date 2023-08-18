@@ -70,9 +70,13 @@ export const CreateAccount = () => {
                 activeLeft={<PasswordInputActiveIcon />}
               />
               <Checkbox>
-                <AppText>
-                  I have read, understood and I agree to CareItator’s Terms and
-                  conditions, and Privacy Policy.
+                <AppText style={styles.termLabel}>
+                  I have read, understood and I agree to CareItator’s{' '}
+                  <AppText style={styles.termLink}>
+                    Terms and conditions
+                  </AppText>
+                  , and{' '}
+                  <AppText style={styles.termLink}>Privacy Policy</AppText>.
                 </AppText>
               </Checkbox>
               <Button label="Get Started" />

@@ -38,4 +38,17 @@ export const styles = StyleSheet.create({
   getStartedBtn: {
     marginTop: 70,
   },
+  termLabel: {
+    flex: 1,
+    fontSize: 12,
+    marginLeft: 8,
+    lineHeight: 16,
+    color: '#828282',
+  },
+  termLink: {
+    fontSize: 12,
+    lineHeight: 16,
+    color: colors.mainPrimary,
+    textDecorationLine: 'underline',
+  },
 });
