@@ -1,11 +1,6 @@
 import React from 'react';
-import {
-  KeyboardAvoidingView,
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  View,
-} from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
+import {View, StatusBar, ScrollView, KeyboardAvoidingView} from 'react-native';
 
 import {colors} from 'theme';
 import {styles} from './CreateAccount.styles';
@@ -13,7 +8,7 @@ import {AppText, BackButton, Button, Checkbox, TextField} from 'components';
 
 export const CreateAccount = () => {
   return (
-    <SafeAreaView style={styles.safeArea}>
+    <SafeAreaView style={styles.safeArea} edges={['top']}>
       <StatusBar barStyle="light-content" />
       <View style={styles.container}>
         <View style={styles.topCenter}>
