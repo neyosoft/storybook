@@ -1,4 +1,5 @@
 import * as React from 'react';
+import SplashScreen from 'react-native-splash-screen';
 import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
@@ -16,7 +17,7 @@ const screenOptions = {headerShown: false};
 
 export function AppNavigation() {
   return (
-    <NavigationContainer theme={theme}>
+    <NavigationContainer theme={theme} onReady={() => SplashScreen.hide()}>
       <Stack.Navigator
         screenOptions={screenOptions}
         initialRouteName={IntroRoutes.Welcome}>
