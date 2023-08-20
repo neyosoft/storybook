@@ -59,7 +59,7 @@ export const Welcome = ({
 
   return (
     <View style={styles.container}>
-      <StatusBar barStyle="dark-content" />
+      <StatusBar barStyle="dark-content" backgroundColor="#E7F0FD" />
 
       <View style={styles.mainWrapper}>
         <Animated.FlatList

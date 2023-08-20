@@ -42,7 +42,7 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 20,
   },
   dots: {
-    top: -160,
+    top: -170,
   },
   buttonContainer: {
     // flex: 1,
