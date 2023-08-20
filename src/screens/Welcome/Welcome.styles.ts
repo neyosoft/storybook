@@ -1,9 +1,12 @@
 import {StyleSheet} from 'react-native';
+
 import {colors, sizes} from 'theme';
 
 export const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    backgroundColor: colors.white,
+  },
+  mainWrapper: {
     backgroundColor: '#E7F0FD',
   },
   slideContainer: {
@@ -20,6 +23,7 @@ export const styles = StyleSheet.create({
     padding: 40,
     paddingTop: 50,
     marginTop: -20,
+    paddingBottom: 0,
     borderTopLeftRadius: 40,
     borderTopRightRadius: 40,
     backgroundColor: colors.white,
@@ -37,10 +41,12 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
     paddingHorizontal: 20,
   },
-  bottomContainer: {
-    flex: 1,
+  dots: {
+    top: -160,
+  },
+  buttonContainer: {
+    // flex: 1,
     padding: 20,
-    marginTop: -100,
-    backgroundColor: colors.white,
+    marginTop: 40,
   },
 });

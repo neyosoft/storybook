@@ -1,16 +1,40 @@
-import React from 'react';
-import {View, Image} from 'react-native';
+import React, {useEffect} from 'react';
+import {View, Image, StatusBar} from 'react-native';
 
 import {GetStartedElleipse} from 'icons';
 import {styles} from './GetStarted.styles';
 import {AppText, Button} from 'components';
 import {colors, images, sizes} from 'theme';
+import {IntroRoutes, IntroStackRoutes} from 'types/navigation';
+import Animated, {
+  withSpring,
+  useSharedValue,
+  useAnimatedStyle,
+} from 'react-native-reanimated';
 
-export const GetStarted = () => {
+const AnimatedIcon = Animated.createAnimatedComponent(GetStartedElleipse);
+
+export const GetStarted = ({
+  navigation,
+}: IntroStackRoutes<IntroRoutes.GetStarted>) => {
+  const pathAnimation = useSharedValue(-50);
+
+  useEffect(() => {
+    pathAnimation.value = 0;
+  }, [pathAnimation]);
+
+  const pathStyle = useAnimatedStyle(() => ({
+    transform: [{translateY: withSpring(pathAnimation.value)}],
+  }));
+
   return (
     <View style={styles.container}>
+      <StatusBar barStyle="light-content" />
       <View style={styles.topArea}>
-        <GetStartedElleipse width={sizes.WINDOW_WIDTH} style={styles.ellipse} />
+        <AnimatedIcon
+          width={sizes.WINDOW_WIDTH}
+          style={[styles.ellipse, pathStyle]}
+        />
         <View>
           <AppText
             variant="medium"
@@ -38,8 +62,16 @@ export const GetStarted = () => {
             How will you like to get started with CareItator
           </AppText>
         </View>
-        <Button label="Create Account" />
-        <Button style={styles.loginBtn} label="Login" variant="default" />
+        <Button
+          label="Create Account"
+          onPress={() => navigation.navigate(IntroRoutes.QuickTip)}
+        />
+        <Button
+          style={styles.loginBtn}
+          label="Login"
+          variant="default"
+          onPress={() => navigation.navigate(IntroRoutes.QuickTip)}
+        />
       </View>
     </View>
   );

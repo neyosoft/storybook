@@ -47,7 +47,7 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
   },
   bottomDescription: {
-    width: '70%',
+    width: '80%',
     lineHeight: 24,
     color: '#4D4D4D',
     textAlign: 'center',

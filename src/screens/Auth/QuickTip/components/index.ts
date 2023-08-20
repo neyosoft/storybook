@@ -1,0 +1,1 @@
+export {QuickTipBadge} from './QuickTipBadge';
