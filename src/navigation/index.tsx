@@ -1,10 +1,14 @@
 import * as React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
+import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
+import {colors} from 'theme';
 import {GetStarted, Welcome} from 'screens';
 import {CreateAccount, QuickTip} from 'screens/Auth';
 import {IntroRoutes, IntroStackParamList} from 'types/navigation';
+
+const theme = DefaultTheme;
+theme.colors.background = colors.white;
 
 const Stack = createNativeStackNavigator<IntroStackParamList>();
 
@@ -12,7 +16,7 @@ const screenOptions = {headerShown: false};
 
 export function AppNavigation() {
   return (
-    <NavigationContainer>
+    <NavigationContainer theme={theme}>
       <Stack.Navigator
         screenOptions={screenOptions}
         initialRouteName={IntroRoutes.Welcome}>

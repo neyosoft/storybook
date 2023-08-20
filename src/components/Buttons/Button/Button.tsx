@@ -1,5 +1,5 @@
 import React from 'react';
-import {Pressable, PressableProps, ActivityIndicator} from 'react-native';
+import {Pressable, PressableProps, ActivityIndicator, View} from 'react-native';
 
 import {colors} from 'theme';
 import {styles} from './Button.styles';
@@ -11,33 +11,30 @@ export interface ButtonProps extends PressableProps {
   variant?: 'primary' | 'default';
 }
 
-export const Button = ({
-  loading,
-  variant = 'primary',
-  style,
-  label,
-  ...props
-}: ButtonProps) => {
-  return (
-    <Pressable
-      style={({pressed}) => [
-        styles.container,
-        styles[variant],
-        {opacity: pressed ? 0.7 : 1},
-        props.disabled ? styles.disabled : undefined,
-        style,
-      ]}
-      {...props}>
-      {loading ? (
-        <ActivityIndicator color={colors.white} />
-      ) : (
-        <AppText
-          size="large"
-          variant="medium"
-          color={variant === 'primary' ? colors.white : colors.dark}>
-          {label}
-        </AppText>
-      )}
-    </Pressable>
-  );
-};
+export const Button = React.forwardRef<View, ButtonProps>(
+  ({loading, variant = 'primary', style, label, ...props}, ref) => {
+    return (
+      <Pressable
+        ref={ref}
+        style={({pressed}) => [
+          styles.container,
+          styles[variant],
+          {opacity: pressed ? 0.7 : 1},
+          props.disabled ? styles.disabled : undefined,
+          style,
+        ]}
+        {...props}>
+        {loading ? (
+          <ActivityIndicator color={colors.white} />
+        ) : (
+          <AppText
+            size="large"
+            variant="medium"
+            color={variant === 'primary' ? colors.white : colors.dark}>
+            {label}
+          </AppText>
+        )}
+      </Pressable>
+    );
+  },
+);
