@@ -1,4 +1,5 @@
 export {EyeClosedIcon} from './EyeClosedIcon';
+export {EyeOpenedIcon} from './EyeOpenedIcon';
 export {EmailInputIcon} from './EmailInputIcon';
 export {ProfileInputIcon} from './ProfileInputIcon';
 export {ThirdSlideEllipse} from './ThirdSlideEllipse';

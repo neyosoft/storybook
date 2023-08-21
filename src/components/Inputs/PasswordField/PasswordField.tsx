@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {View, TextInput, TextInputProps, TouchableOpacity} from 'react-native';
 
-import {EyeClosedIcon} from 'icons';
+import {EyeClosedIcon, EyeOpenedIcon} from 'icons';
 import {styles} from './PasswordField.styles';
 
 export interface TextFieldProps extends TextInputProps {
@@ -35,7 +35,7 @@ export const PasswordField = ({
       />
       {focused && (
         <TouchableOpacity onPress={() => setShowPassword(value => !value)}>
-          <EyeClosedIcon />
+          {showPassword ? <EyeClosedIcon /> : <EyeOpenedIcon />}
         </TouchableOpacity>
       )}
     </View>
