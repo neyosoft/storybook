@@ -2,10 +2,10 @@ import React from 'react';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {
   View,
+  Platform,
   StatusBar,
   ScrollView,
   KeyboardAvoidingView,
-  Platform,
 } from 'react-native';
 
 const keyboardVerticalOffset = Platform.OS === 'ios' ? 60 : 0;
@@ -50,7 +50,7 @@ export const CreateAccount = () => {
         </View>
 
         <KeyboardAvoidingView
-          behavior="height"
+          behavior="padding"
           style={styles.formWrapper}
           keyboardVerticalOffset={keyboardVerticalOffset}>
           <ScrollView contentContainerStyle={styles.contentContainerStyle}>
