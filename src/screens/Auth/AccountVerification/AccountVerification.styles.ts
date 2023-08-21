@@ -35,20 +35,34 @@ export const styles = StyleSheet.create({
     paddingTop: 40,
     paddingHorizontal: 24,
   },
+  formBody: {
+    alignItems: 'center',
+  },
+  otpInput: {
+    height: 65,
+    width: '85%',
+  },
+  underlineStyleBase: {
+    width: 60,
+    height: 60,
+    fontSize: 16,
+    borderRadius: 10,
+    fontWeight: '500',
+    color: colors.dark,
+    borderColor: '#E6E6E6',
+    fontFamily: 'Roobert-Medium',
+    backgroundColor: colors.white,
+  },
+  underlineStyleHighLighted: {
+    borderWidth: 1,
+    borderColor: '#00AEEF4D',
+    backgroundColor: '#F1F6FE',
+  },
+  textContainer: {
+    marginTop: 60,
+    alignItems: 'center',
+  },
   getStartedBtn: {
     marginTop: 70,
-  },
-  termLabel: {
-    flex: 1,
-    fontSize: 12,
-    marginLeft: 8,
-    lineHeight: 16,
-    color: '#828282',
-  },
-  termLink: {
-    fontSize: 12,
-    lineHeight: 16,
-    color: colors.mainPrimary,
-    textDecorationLine: 'underline',
   },
 });

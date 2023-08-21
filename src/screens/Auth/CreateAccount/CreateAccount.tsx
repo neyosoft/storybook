@@ -30,8 +30,11 @@ import {
   PasswordInputActiveIcon,
   PhoneNumberInputActiveIcon,
 } from 'icons';
+import {IntroRoutes, IntroStackRoutes} from 'types/navigation';
 
-export const CreateAccount = () => {
+export const CreateAccount = ({
+  navigation,
+}: IntroStackRoutes<IntroRoutes.CreateAccount>) => {
   return (
     <SafeAreaView style={styles.safeArea} edges={['top']}>
       <StatusBar barStyle="light-content" />
@@ -86,7 +89,14 @@ export const CreateAccount = () => {
                 and <AppText style={styles.termLink}>Privacy Policy</AppText>.
               </AppText>
             </Checkbox>
-            <Button label="Get Started" />
+            <Button
+              label="Get Started"
+              onPress={() =>
+                navigation.navigate(IntroRoutes.AccountVerification, {
+                  email: 'access2emma@gmail.com',
+                })
+              }
+            />
           </ScrollView>
         </KeyboardAvoidingView>
       </View>

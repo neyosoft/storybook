@@ -5,7 +5,12 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import {colors} from 'theme';
 import {GetStarted, Welcome} from 'screens';
-import {CreateAccount, QuickTip} from 'screens/Auth';
+import {
+  AccountVerification,
+  AccountVerificationCompleted,
+  CreateAccount,
+  QuickTip,
+} from 'screens/Auth';
 import {IntroRoutes, IntroStackParamList} from 'types/navigation';
 
 const theme = DefaultTheme;
@@ -27,6 +32,14 @@ export function AppNavigation() {
         <Stack.Screen
           component={CreateAccount}
           name={IntroRoutes.CreateAccount}
+        />
+        <Stack.Screen
+          component={AccountVerification}
+          name={IntroRoutes.AccountVerification}
+        />
+        <Stack.Screen
+          component={AccountVerificationCompleted}
+          name={IntroRoutes.AccountVerificationCompleted}
         />
       </Stack.Navigator>
     </NavigationContainer>

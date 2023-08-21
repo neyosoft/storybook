@@ -1,13 +1,27 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {View, StatusBar, ScrollView, KeyboardAvoidingView} from 'react-native';
+import OTPInputView from '@twotalltotems/react-native-otp-input';
+import {
+  View,
+  StatusBar,
+  ScrollView,
+  TouchableOpacity,
+  KeyboardAvoidingView,
+} from 'react-native';
 
 import {colors} from 'theme';
 import {styles} from './AccountVerification.styles';
-import {Button, AppText, TextField, BackButton} from 'components';
-import {ProfileInputIcon, ProfileInputActiveIcon} from 'icons';
+import {Button, AppText, BackButton} from 'components';
+import {IntroRoutes, IntroStackRoutes} from 'types/navigation';
 
-export const AccountVerification = () => {
+export const AccountVerification = ({
+  navigation,
+  route,
+}: IntroStackRoutes<IntroRoutes.AccountVerification>) => {
+  const {email} = route.params;
+
+  const [otp, setOTP] = useState('');
+
   return (
     <SafeAreaView style={styles.safeArea} edges={['top']}>
       <StatusBar barStyle="light-content" />
@@ -18,23 +32,47 @@ export const AccountVerification = () => {
             variant="semi-bold"
             style={styles.title}
             color={colors.white}>
-            Create Account
+            Verify Email Address
           </AppText>
           <AppText color={colors.white50}>
-            Get started and enjoy unlimited access to multiple bookings
+            Kindly enter the OTP code that was sent to {email}
           </AppText>
         </View>
 
         <View style={styles.formWrapper}>
           <KeyboardAvoidingView>
             <ScrollView contentContainerStyle={styles.contentContainerStyle}>
-              <TextField
-                placeholder="Enter Firstname"
-                left={<ProfileInputIcon />}
-                activeLeft={<ProfileInputActiveIcon />}
-              />
+              <View style={styles.formBody}>
+                <OTPInputView
+                  pinCount={4}
+                  onCodeChanged={setOTP}
+                  style={styles.otpInput}
+                  keyboardType="number-pad"
+                  placeholderTextColor="#79787A"
+                  codeInputFieldStyle={styles.underlineStyleBase}
+                  codeInputHighlightStyle={styles.underlineStyleHighLighted}
+                />
 
-              <Button label="Get Started" />
+                <View style={styles.textContainer}>
+                  <AppText size="large">Didn’t receive OTP code?</AppText>
+                  <TouchableOpacity>
+                    <AppText
+                      size="large"
+                      variant="semi-bold"
+                      color={colors.mainPrimary}>
+                      Resend code
+                    </AppText>
+                  </TouchableOpacity>
+                </View>
+              </View>
+
+              <Button
+                label="Verify"
+                disabled={otp.length !== 4}
+                onPress={() =>
+                  navigation.navigate(IntroRoutes.AccountVerificationCompleted)
+                }
+              />
             </ScrollView>
           </KeyboardAvoidingView>
         </View>

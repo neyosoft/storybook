@@ -1,3 +1,4 @@
+export {CompletedIcon} from './CompletedIcon';
 export {EyeClosedIcon} from './EyeClosedIcon';
 export {EyeOpenedIcon} from './EyeOpenedIcon';
 export {EmailInputIcon} from './EmailInputIcon';

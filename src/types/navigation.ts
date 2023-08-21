@@ -5,6 +5,8 @@ export enum IntroRoutes {
   QuickTip = 'QuickTip',
   GetStarted = 'GetStarted',
   CreateAccount = 'CreateAccount',
+  AccountVerification = 'AccountVerification',
+  AccountVerificationCompleted = 'AccountVerificationCompleted',
 }
 
 export type IntroStackParamList = {
@@ -12,6 +14,8 @@ export type IntroStackParamList = {
   [IntroRoutes.QuickTip]: undefined;
   [IntroRoutes.GetStarted]: undefined;
   [IntroRoutes.CreateAccount]: undefined;
+  [IntroRoutes.AccountVerification]: {email: string};
+  [IntroRoutes.AccountVerificationCompleted]: undefined;
 };
 
 export type IntroStackRoutes<T extends keyof IntroStackParamList> =
