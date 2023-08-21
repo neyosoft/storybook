@@ -12,6 +12,11 @@ export const styles = StyleSheet.create({
     padding: 24,
     backgroundColor: colors.mainPrimary,
   },
+  closeBtn: {
+    position: 'absolute',
+    top: 0,
+    right: 20,
+  },
   topCenter: {
     marginVertical: 50,
     alignItems: 'center',

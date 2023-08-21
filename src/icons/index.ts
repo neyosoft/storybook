@@ -8,6 +8,7 @@ export {GetStartedElleipse} from './GetStartedElleipse';
 export {NavigationBackIcon} from './NavigationBackIcon';
 export {OnboardingFastIcon} from './OnboardingFastIcon';
 export {SecondSlideEllipse} from './SecondSlideEllipse';
+export {NavigationCloseIcon} from './NavigationCloseIcon';
 export {CheckboxCheckedIcon} from './CheckboxCheckedIcon';
 export {PhoneNumberInputIcon} from './PhoneNumberInputIcon';
 export {EmailInputActiveIcon} from './EmailInputActiveIcon';

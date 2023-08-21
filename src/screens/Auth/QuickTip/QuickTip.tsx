@@ -6,6 +6,7 @@ import {styles} from './QuickTip.styles';
 import {QuickTipBadge} from './components';
 import {AppText, Button} from 'components';
 import {IntroRoutes, IntroStackRoutes} from 'types/navigation';
+import {NavigationCloseIcon} from 'icons';
 
 const list = [
   'Support Services',
@@ -39,6 +40,10 @@ export const QuickTip = ({
     <SafeAreaView style={styles.safeArea}>
       <StatusBar barStyle="light-content" />
       <View style={styles.container}>
+        <NavigationCloseIcon
+          style={styles.closeBtn}
+          onPress={() => navigation.navigate(IntroRoutes.CreateAccount)}
+        />
         <View style={styles.topCenter}>
           <AppText color={colors.secondary}>Fun Fact 🤩</AppText>
           <AppText
