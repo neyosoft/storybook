@@ -1,26 +1,34 @@
 import React from 'react';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {View, StatusBar, ScrollView, KeyboardAvoidingView} from 'react-native';
+import {
+  View,
+  StatusBar,
+  ScrollView,
+  KeyboardAvoidingView,
+  Platform,
+} from 'react-native';
+
+const keyboardVerticalOffset = Platform.OS === 'ios' ? 60 : 0;
 
 import {colors} from 'theme';
 import {styles} from './CreateAccount.styles';
 import {
   AppText,
-  BackButton,
   Button,
   Checkbox,
-  PasswordField,
   TextField,
+  BackButton,
+  PasswordField,
 } from 'components';
 import {
   EmailInputIcon,
   ProfileInputIcon,
+  PasswordInputIcon,
   EmailInputActiveIcon,
   PhoneNumberInputIcon,
   ProfileInputActiveIcon,
-  PhoneNumberInputActiveIcon,
-  PasswordInputIcon,
   PasswordInputActiveIcon,
+  PhoneNumberInputActiveIcon,
 } from 'icons';
 
 export const CreateAccount = () => {
@@ -41,48 +49,46 @@ export const CreateAccount = () => {
           </AppText>
         </View>
 
-        <View style={styles.formWrapper}>
-          <KeyboardAvoidingView>
-            <ScrollView contentContainerStyle={styles.contentContainerStyle}>
-              <TextField
-                placeholder="Enter Firstname"
-                left={<ProfileInputIcon />}
-                activeLeft={<ProfileInputActiveIcon />}
-              />
-              <TextField
-                placeholder="Enter Lastname"
-                left={<ProfileInputIcon />}
-                activeLeft={<ProfileInputActiveIcon />}
-              />
-              <TextField
-                placeholder="Enter email address"
-                left={<EmailInputIcon />}
-                activeLeft={<EmailInputActiveIcon />}
-              />
-              <TextField
-                placeholder="Enter phone number"
-                left={<PhoneNumberInputIcon />}
-                activeLeft={<PhoneNumberInputActiveIcon />}
-              />
-              <PasswordField
-                placeholder="Password (Min. of 8 Character)"
-                left={<PasswordInputIcon />}
-                activeLeft={<PasswordInputActiveIcon />}
-              />
-              <Checkbox>
-                <AppText style={styles.termLabel}>
-                  I have read, understood and I agree to CareItator’s{' '}
-                  <AppText style={styles.termLink}>
-                    Terms and conditions
-                  </AppText>
-                  , and{' '}
-                  <AppText style={styles.termLink}>Privacy Policy</AppText>.
-                </AppText>
-              </Checkbox>
-              <Button label="Get Started" />
-            </ScrollView>
-          </KeyboardAvoidingView>
-        </View>
+        <KeyboardAvoidingView
+          behavior="height"
+          style={styles.formWrapper}
+          keyboardVerticalOffset={keyboardVerticalOffset}>
+          <ScrollView contentContainerStyle={styles.contentContainerStyle}>
+            <TextField
+              placeholder="Enter Firstname"
+              left={<ProfileInputIcon />}
+              activeLeft={<ProfileInputActiveIcon />}
+            />
+            <TextField
+              placeholder="Enter Lastname"
+              left={<ProfileInputIcon />}
+              activeLeft={<ProfileInputActiveIcon />}
+            />
+            <TextField
+              placeholder="Enter email address"
+              left={<EmailInputIcon />}
+              activeLeft={<EmailInputActiveIcon />}
+            />
+            <TextField
+              placeholder="Enter phone number"
+              left={<PhoneNumberInputIcon />}
+              activeLeft={<PhoneNumberInputActiveIcon />}
+            />
+            <PasswordField
+              placeholder="Password (Min. of 8 Character)"
+              left={<PasswordInputIcon />}
+              activeLeft={<PasswordInputActiveIcon />}
+            />
+            <Checkbox>
+              <AppText style={styles.termLabel}>
+                I have read, understood and I agree to CareItator’s{' '}
+                <AppText style={styles.termLink}>Terms and conditions</AppText>,
+                and <AppText style={styles.termLink}>Privacy Policy</AppText>.
+              </AppText>
+            </Checkbox>
+            <Button label="Get Started" />
+          </ScrollView>
+        </KeyboardAvoidingView>
       </View>
     </SafeAreaView>
   );

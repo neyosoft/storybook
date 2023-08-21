@@ -4,24 +4,8 @@ import {View, StatusBar, ScrollView, KeyboardAvoidingView} from 'react-native';
 
 import {colors} from 'theme';
 import {styles} from './AccountVerification.styles';
-import {
-  Button,
-  AppText,
-  Checkbox,
-  TextField,
-  BackButton,
-  PasswordField,
-} from 'components';
-import {
-  EmailInputIcon,
-  ProfileInputIcon,
-  PasswordInputIcon,
-  EmailInputActiveIcon,
-  PhoneNumberInputIcon,
-  ProfileInputActiveIcon,
-  PasswordInputActiveIcon,
-  PhoneNumberInputActiveIcon,
-} from 'icons';
+import {Button, AppText, TextField, BackButton} from 'components';
+import {ProfileInputIcon, ProfileInputActiveIcon} from 'icons';
 
 export const AccountVerification = () => {
   return (
@@ -49,36 +33,7 @@ export const AccountVerification = () => {
                 left={<ProfileInputIcon />}
                 activeLeft={<ProfileInputActiveIcon />}
               />
-              <TextField
-                placeholder="Enter Lastname"
-                left={<ProfileInputIcon />}
-                activeLeft={<ProfileInputActiveIcon />}
-              />
-              <TextField
-                placeholder="Enter email address"
-                left={<EmailInputIcon />}
-                activeLeft={<EmailInputActiveIcon />}
-              />
-              <TextField
-                placeholder="Enter phone number"
-                left={<PhoneNumberInputIcon />}
-                activeLeft={<PhoneNumberInputActiveIcon />}
-              />
-              <PasswordField
-                placeholder="Password (Min. of 8 Character)"
-                left={<PasswordInputIcon />}
-                activeLeft={<PasswordInputActiveIcon />}
-              />
-              <Checkbox>
-                <AppText style={styles.termLabel}>
-                  I have read, understood and I agree to CareItator’s{' '}
-                  <AppText style={styles.termLink}>
-                    Terms and conditions
-                  </AppText>
-                  , and{' '}
-                  <AppText style={styles.termLink}>Privacy Policy</AppText>.
-                </AppText>
-              </Checkbox>
+
               <Button label="Get Started" />
             </ScrollView>
           </KeyboardAvoidingView>

@@ -5,8 +5,8 @@ import {colors} from 'theme';
 import {styles} from './QuickTip.styles';
 import {QuickTipBadge} from './components';
 import {AppText, Button} from 'components';
-import {IntroRoutes, IntroStackRoutes} from 'types/navigation';
 import {NavigationCloseIcon} from 'icons';
+import {IntroRoutes, IntroStackRoutes} from 'types/navigation';
 
 const list = [
   'Support Services',
