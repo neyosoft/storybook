@@ -8,10 +8,9 @@ export const styles = StyleSheet.create({
   },
   topArea: {
     flex: 1,
-    alignItems: 'center',
     padding: 50,
+    alignItems: 'center',
     justifyContent: 'flex-end',
-    backgroundColor: colors.mainPrimary,
   },
   closeBtn: {
     top: 0,

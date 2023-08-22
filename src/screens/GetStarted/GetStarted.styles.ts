@@ -4,13 +4,12 @@ import {colors} from 'theme';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.white,
+    backgroundColor: colors.mainPrimary,
   },
   topArea: {
     flex: 1,
     padding: 32,
     justifyContent: 'flex-end',
-    backgroundColor: colors.mainPrimary,
   },
   ellipse: {
     top: 0,
@@ -33,8 +32,11 @@ export const styles = StyleSheet.create({
     position: 'absolute',
   },
   bottomArea: {
-    flex: 1,
-    paddingHorizontal: 24,
+    padding: 24,
+    paddingBottom: 30,
+    borderTopLeftRadius: 40,
+    borderTopRightRadius: 40,
+    backgroundColor: colors.white,
   },
   bottoomTextContainer: {
     rowGap: 8,
