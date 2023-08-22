@@ -5,12 +5,12 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import {colors} from 'theme';
 import {CompletedIcon} from 'icons';
 import {AppText, Button, CloseButton} from 'components';
-import {styles} from './AccountVerificationCompleted.styles';
+import {styles} from './PasswordResetCompleted.styles';
 import {IntroRoutes, IntroStackRoutes} from 'types/navigation';
 
-export const AccountVerificationCompleted = ({
+export const PasswordResetCompleted = ({
   navigation,
-}: IntroStackRoutes<IntroRoutes.AccountVerificationCompleted>) => {
+}: IntroStackRoutes<IntroRoutes.PasswordResetCompleted>) => {
   const onSkip = () => navigation.navigate(IntroRoutes.QuickTip);
 
   return (
@@ -22,25 +22,20 @@ export const AccountVerificationCompleted = ({
           Awesome 😎
         </AppText>
         <AppText color={colors.white80} style={styles.pageDescription}>
-          Congratulations! Your Verification was successful
+          Your password reset was successful
         </AppText>
       </View>
       <View style={styles.bottomArea}>
         <View style={styles.bottoomTextContainer}>
           <CompletedIcon />
           <AppText style={styles.bottomDescription}>
-            We are making progress. Set up your location to continue
+            To log back into your account, kindly click on the back to login
+            button to confirm reset.
           </AppText>
         </View>
         <Button
-          label="Set up Location"
-          onPress={() => navigation.navigate(IntroRoutes.RequestLocationAccess)}
-        />
-        <Button
-          variant="default"
-          onPress={onSkip}
-          label="Skip for now"
-          style={styles.skipBtn}
+          label="Back to Login"
+          onPress={() => navigation.navigate(IntroRoutes.Login)}
         />
       </View>
     </SafeAreaView>

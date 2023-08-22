@@ -6,12 +6,16 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {colors} from 'theme';
 import {GetStarted, Welcome} from 'screens';
 import {
+  Login,
   QuickTip,
   MyLocation,
   CreateAccount,
+  PasswordReset,
+  ForgetPassword,
   AccountVerification,
   IdentityVerification,
   RequestLocationAccess,
+  PasswordResetCompleted,
   AccountVerificationCompleted,
 } from 'screens/Auth';
 import {IntroRoutes, IntroStackParamList} from 'types/navigation';
@@ -29,10 +33,19 @@ export function AppNavigation() {
       <Stack.Navigator
         screenOptions={screenOptions}
         initialRouteName={IntroRoutes.Welcome}>
+        <Stack.Screen name={IntroRoutes.Login} component={Login} />
         <Stack.Screen name={IntroRoutes.Welcome} component={Welcome} />
         <Stack.Screen name={IntroRoutes.QuickTip} component={QuickTip} />
         <Stack.Screen name={IntroRoutes.GetStarted} component={GetStarted} />
+        <Stack.Screen
+          name={IntroRoutes.PasswordReset}
+          component={PasswordReset}
+        />
         <Stack.Screen name={IntroRoutes.MyLocation} component={MyLocation} />
+        <Stack.Screen
+          component={ForgetPassword}
+          name={IntroRoutes.ForgetPassword}
+        />
         <Stack.Screen
           component={CreateAccount}
           name={IntroRoutes.CreateAccount}
@@ -48,6 +61,10 @@ export function AppNavigation() {
         <Stack.Screen
           component={RequestLocationAccess}
           name={IntroRoutes.RequestLocationAccess}
+        />
+        <Stack.Screen
+          component={PasswordResetCompleted}
+          name={IntroRoutes.PasswordResetCompleted}
         />
         <Stack.Screen
           component={AccountVerificationCompleted}

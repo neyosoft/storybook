@@ -18,9 +18,17 @@ export const AccountVerification = ({
   navigation,
   route,
 }: IntroStackRoutes<IntroRoutes.AccountVerification>) => {
-  const {email} = route.params;
+  const {email, type} = route.params;
 
   const [otp, setOTP] = useState('');
+
+  const handleSubmit = () => {
+    if (type === 'CreateAccount') {
+      navigation.navigate(IntroRoutes.AccountVerificationCompleted);
+    } else {
+      navigation.navigate(IntroRoutes.PasswordReset);
+    }
+  };
 
   return (
     <SafeAreaView style={styles.safeArea} edges={['top']}>
@@ -69,9 +77,7 @@ export const AccountVerification = ({
               <Button
                 label="Verify"
                 disabled={otp.length !== 4}
-                onPress={() =>
-                  navigation.navigate(IntroRoutes.AccountVerificationCompleted)
-                }
+                onPress={handleSubmit}
               />
             </ScrollView>
           </KeyboardAvoidingView>

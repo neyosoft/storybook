@@ -70,7 +70,7 @@ export const GetStarted = ({
           style={styles.loginBtn}
           label="Login"
           variant="default"
-          onPress={() => navigation.navigate(IntroRoutes.QuickTip)}
+          onPress={() => navigation.navigate(IntroRoutes.Login)}
         />
       </View>
     </View>
