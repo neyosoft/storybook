@@ -24,11 +24,7 @@ import {
   EmailInputIcon,
   ProfileInputIcon,
   PasswordInputIcon,
-  EmailInputActiveIcon,
   PhoneNumberInputIcon,
-  ProfileInputActiveIcon,
-  PasswordInputActiveIcon,
-  PhoneNumberInputActiveIcon,
 } from 'icons';
 import {IntroRoutes, IntroStackRoutes} from 'types/navigation';
 
@@ -60,27 +56,27 @@ export const CreateAccount = ({
             <TextField
               placeholder="Enter Firstname"
               left={<ProfileInputIcon />}
-              activeLeft={<ProfileInputActiveIcon />}
+              activeLeft={<ProfileInputIcon color={colors.secondary} />}
             />
             <TextField
               placeholder="Enter Lastname"
               left={<ProfileInputIcon />}
-              activeLeft={<ProfileInputActiveIcon />}
+              activeLeft={<ProfileInputIcon color={colors.secondary} />}
             />
             <TextField
               placeholder="Enter email address"
               left={<EmailInputIcon />}
-              activeLeft={<EmailInputActiveIcon />}
+              activeLeft={<EmailInputIcon color={colors.secondary} />}
             />
             <TextField
               placeholder="Enter phone number"
               left={<PhoneNumberInputIcon />}
-              activeLeft={<PhoneNumberInputActiveIcon />}
+              activeLeft={<PhoneNumberInputIcon color={colors.secondary} />}
             />
             <PasswordField
               placeholder="Password (Min. of 8 Character)"
               left={<PasswordInputIcon />}
-              activeLeft={<PasswordInputActiveIcon />}
+              activeLeft={<PasswordInputIcon color={colors.secondary} />}
             />
             <Checkbox>
               <AppText style={styles.termLabel}>

@@ -34,10 +34,18 @@ export const styles = StyleSheet.create({
     borderTopRightRadius: 40,
     backgroundColor: colors.white,
   },
+  identityImage: {
+    width: 131,
+    height: 131,
+  },
   bottoomTextContainer: {
     rowGap: 8,
     padding: 20,
+    marginBottom: 10,
     alignItems: 'center',
+  },
+  bottomTitle: {
+    fontSize: 24,
   },
   bottomDescription: {
     width: '90%',

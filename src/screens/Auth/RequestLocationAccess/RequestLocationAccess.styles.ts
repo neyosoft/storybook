@@ -6,38 +6,31 @@ export const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.mainPrimary,
   },
-  topArea: {
+  main: {
     flex: 1,
-    alignItems: 'center',
-    padding: 50,
     justifyContent: 'flex-end',
-    backgroundColor: colors.mainPrimary,
-  },
-  closeBtn: {
-    top: 0,
-    right: 20,
-    position: 'absolute',
-  },
-  pageTitle: {
-    fontSize: 30,
-    lineHeight: 42,
-  },
-  pageDescription: {
-    marginTop: 12,
-    lineHeight: 24,
-    textAlign: 'center',
   },
   bottomArea: {
     padding: 24,
-    paddingBottom: 30,
     borderTopLeftRadius: 40,
     borderTopRightRadius: 40,
     backgroundColor: colors.white,
   },
+  closeBtn: {
+    position: 'absolute',
+    right: 20,
+    top: 20,
+  },
   bottoomTextContainer: {
     rowGap: 8,
-    padding: 20,
+    padding: 26,
     alignItems: 'center',
+  },
+  bottomTitle: {
+    fontSize: 24,
+    marginTop: 10,
+    lineHeight: 28,
+    textAlign: 'center',
   },
   bottomDescription: {
     width: '90%',
@@ -46,7 +39,7 @@ export const styles = StyleSheet.create({
     color: colors.dark,
     textAlign: 'center',
   },
-  skipBtn: {
+  loginBtn: {
     marginTop: 24,
   },
 });
