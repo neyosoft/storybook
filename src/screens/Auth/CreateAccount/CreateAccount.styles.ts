@@ -13,6 +13,7 @@ export const styles = StyleSheet.create({
   },
   topCenter: {
     padding: 24,
+    alignItems: 'flex-start',
   },
   title: {
     fontSize: 30,
