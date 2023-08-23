@@ -20,6 +20,8 @@ export const styles = StyleSheet.create({
   input: {
     flex: 1,
     height: 45,
+    fontSize: 16,
+    fontWeight: '500',
   },
   indicator: {
     width: 18,

@@ -30,9 +30,23 @@ export const styles = StyleSheet.create({
     borderTopRightRadius: 40,
     backgroundColor: colors.white,
   },
+  mapContainer: {
+    flex: 1,
+    padding: 20,
+  },
   contentContainerStyle: {
     rowGap: 20,
     paddingTop: 40,
     paddingHorizontal: 24,
+  },
+  mapItemRowContainer: {
+    padding: 10,
+    columnGap: 9,
+    flexDirection: 'row',
+  },
+  mapItemRowTitle: {},
+  mapItemRowSubtitle: {
+    opacity: 0.5,
+    lineHeight: 24,
   },
 });

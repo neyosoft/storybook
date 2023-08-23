@@ -4,6 +4,7 @@ export {EyeClosedIcon} from './EyeClosedIcon';
 export {EyeOpenedIcon} from './EyeOpenedIcon';
 export {DarkCloseIcon} from './DarkCloseIcon';
 export {EmailInputIcon} from './EmailInputIcon';
+export {LocationMapIcon} from './LocationMapIcon';
 export {ProfileInputIcon} from './ProfileInputIcon';
 export {ThirdSlideEllipse} from './ThirdSlideEllipse';
 export {FirstSlideEllipse} from './FirstSlideEllipse';

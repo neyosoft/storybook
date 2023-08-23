@@ -32,7 +32,7 @@ export function AppNavigation() {
     <NavigationContainer theme={theme} onReady={() => SplashScreen.hide()}>
       <Stack.Navigator
         screenOptions={screenOptions}
-        initialRouteName={IntroRoutes.Welcome}>
+        initialRouteName={IntroRoutes.MyLocation}>
         <Stack.Screen name={IntroRoutes.Login} component={Login} />
         <Stack.Screen name={IntroRoutes.Welcome} component={Welcome} />
         <Stack.Screen name={IntroRoutes.QuickTip} component={QuickTip} />
