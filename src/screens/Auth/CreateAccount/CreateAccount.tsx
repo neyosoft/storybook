@@ -8,8 +8,6 @@ import {
   KeyboardAvoidingView,
 } from 'react-native';
 
-const keyboardVerticalOffset = Platform.OS === 'ios' ? 60 : 0;
-
 import {colors} from 'theme';
 import {styles} from './CreateAccount.styles';
 import {
@@ -49,9 +47,9 @@ export const CreateAccount = ({
         </View>
 
         <KeyboardAvoidingView
-          behavior="padding"
           style={styles.formWrapper}
-          keyboardVerticalOffset={keyboardVerticalOffset}>
+          keyboardVerticalOffset={60}
+          behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
           <ScrollView contentContainerStyle={styles.contentContainerStyle}>
             <TextField
               placeholder="Enter Firstname"

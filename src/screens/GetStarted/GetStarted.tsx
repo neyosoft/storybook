@@ -29,7 +29,10 @@ export const GetStarted = ({
 
   return (
     <View style={styles.container}>
-      <StatusBar barStyle="light-content" />
+      <StatusBar
+        barStyle="light-content"
+        backgroundColor={colors.mainPrimary}
+      />
       <View style={styles.topArea}>
         <AnimatedIcon
           width={sizes.WINDOW_WIDTH}
