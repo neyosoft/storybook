@@ -16,7 +16,6 @@ import {Button, AppText, BackButton, GoogPlacesTextField} from 'components';
 
 const textInputProps = {
   left: <SearchIcon />,
-  isFocused: true,
   clearButtonMode: 'never',
   InputComp: GoogPlacesTextField,
   activeLeft: <SearchIcon color={colors.secondary} />,
@@ -37,17 +36,28 @@ const componentStyles: GooglePlacesAutocompleteProps['styles'] = {
   },
 };
 
-const renderRow = (rowData: any) => (
-  <View style={styles.mapItemRowContainer}>
-    <LocationMapIcon />
-    <View>
-      <AppText variant="semi-bold">
-        {rowData.description || rowData.formatted_address || rowData.name}
-      </AppText>
-      <AppText style={styles.mapItemRowSubtitle}>Ibadan, Oyo State</AppText>
+const renderRow = (rowData: any) => {
+  const terms = rowData?.terms;
+
+  let location = 'Nigeria';
+  if (Array.isArray(terms)) {
+    if (terms.length > 2) {
+      location = terms?.[1]?.value ?? 'Nigeria';
+    }
+  }
+
+  return (
+    <View style={styles.mapItemRowContainer}>
+      <LocationMapIcon />
+      <View>
+        <AppText variant="semi-bold">
+          {rowData?.description || rowData?.formatted_address || rowData?.name}
+        </AppText>
+        <AppText style={styles.mapItemRowSubtitle}>{location}</AppText>
+      </View>
     </View>
-  </View>
-);
+  );
+};
 
 export const MyLocation = ({
   navigation,
