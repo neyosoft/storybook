@@ -6,7 +6,13 @@ Introducing **CareItator**, a powerful tool that addresses the pressing staffing
 
 > **Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
-## Step 1: Start the Metro Server
+## Step 1: Environment configuration
+
+```bash
+cp .example.env .env.dev
+```
+
+## Step 2: Start the Metro Server
 
 ```bash
 npm start
@@ -15,20 +21,26 @@ npm start
 yarn start
 ```
 
-## Step 2: Start your Application
+## Step 3: Start your Application
 
 ### For Android
 
 ```bash
-yarn android
+yarn android:dev
 ```
 
 ### For iOS
 
 ```bash
-yarn ios
+yarn ios:dev
 ```
 
 # Troubleshooting
+
+For iOS native dependencies
+
+```bash
+npx pod-install ios
+```
 
 If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.

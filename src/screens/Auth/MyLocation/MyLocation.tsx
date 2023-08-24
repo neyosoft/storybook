@@ -16,6 +16,7 @@ import {Button, AppText, BackButton, GoogPlacesTextField} from 'components';
 
 const textInputProps = {
   left: <SearchIcon />,
+  isFocused: true,
   clearButtonMode: 'never',
   InputComp: GoogPlacesTextField,
   activeLeft: <SearchIcon color={colors.secondary} />,
